@@ -17,7 +17,10 @@
            (GET "/" [] "Hello World!")
            (GET "/employees" [] (response @employees))
            (GET ["/employees/:id", :id #"[0-9]+"] [id] (response (first (filter #(= (:id %) (Integer/parseInt id)) @employees))))
-           (GET "/employees/:name" [name] (response (first (filter #(.equalsIgnoreCase (:name %) name) @employees)))) ;TODO replace with querystring name=Bill
+           (GET "/employees/" [param val]
+             (response (if (.contains ["name", "company"] param)
+                 (first (filter #(.equals (.toLowerCase ((keyword param) %)) val) @employees))
+                 (first (filter #(.equals ((keyword param) %) (Long/parseLong val)) @employees)))))
            (POST "/employees" request
              (let [person {:id      (inc (apply max (map #(:id %) @employees)))
                            :name    (get-in request [:body :name])
