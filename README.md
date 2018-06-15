@@ -45,6 +45,13 @@ curl -X POST http://localhost:3000/employees \
 curl -X DELETE http://localhost:3000/employees/3        
 ```
 
+#Formatting
+https://github.com/weavejester/cljfmt
+
+Code format 
+```lein cljfmt fix```
+
+
 ## To read
 http://weavejester.github.io/compojure/compojure.route.html
 
