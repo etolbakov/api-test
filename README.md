@@ -26,9 +26,11 @@ To start a web server for the application, run:
 
  ```curl -X GET http://localhost:3000/employees/1```
 
-- Get employee by name
+- Get employee by parameter
 
- ```curl -X GET http://localhost:3000/employees/bill```
+ ```curl -X GET http://localhost:3000/employees/?param=company&val=winn```
+ ```curl -X GET http://localhost:3000/employees/?param=name&val=steve```
+ ```curl -X GET http://localhost:3000/employees/?param=age&val=28```
 
 - Add new employee
 
