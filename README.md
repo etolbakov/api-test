@@ -24,25 +24,20 @@ To start a web server for the application, run:
 
 - Get employee by id
 
- ```curl -X GET http://localhost:3000/employees/1```
-
-- Get employee by parameter
-
- ```curl -X GET http://localhost:3000/employees/?param=company&val=winn```
- ```curl -X GET http://localhost:3000/employees/?param=name&val=steve```
- ```curl -X GET http://localhost:3000/employees/?param=age&val=28```
+ ```curl -X GET http://localhost:3000/employees/uuid```
 
 - Add new employee
 
 ```
 curl -X POST http://localhost:3000/employees \
-        --data '{"name":"John", "age" : 29, "salary":"4455", "company": "MLtd"}' --header "Content-type:application/json"
+        --data '{"name":"John", "age" : 29, "salary": 4455, "company": 
+        "MLtd"}' --header "Content-type:application/json"
 ```
 
 - Remove employee
 
 ```
-curl -X DELETE http://localhost:3000/employees/3        
+curl -X DELETE http://localhost:3000/employees/uuid       
 ```
 
 #Formatting

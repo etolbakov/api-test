@@ -1,4 +1,4 @@
-(ns api-test.handler-test
+(ns api.handler-test
   (:require [clojure.test :refer :all]
             [ring.mock.request :as mock]
             [api-test.handler :refer :all]))

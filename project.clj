@@ -9,7 +9,7 @@
 
   :plugins [[lein-ring "0.9.7"]
             [lein-cljfmt "0.5.7"]]
-  :ring {:handler api-test.handler/app}
+  :ring {:handler api.handler/app}
   :profiles
   {:dev {:dependencies [[javax.servlet/servlet-api "2.5"]
                         [ring/ring-mock "0.3.0"]]}})
