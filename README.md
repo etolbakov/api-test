@@ -17,7 +17,7 @@ To start a web server for the application, run:
 
     lein ring server
 
-##Endpoints
+## Endpoints
  - Get all employees
  
  ```curl -X GET http://localhost:3000/employees```
