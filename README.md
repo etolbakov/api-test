@@ -40,7 +40,7 @@ curl -X POST http://localhost:3000/employees \
 curl -X DELETE http://localhost:3000/employees/uuid       
 ```
 
-#Formatting
+## Formatting
 https://github.com/weavejester/cljfmt
 
 Code format 
@@ -50,8 +50,8 @@ Code format
 ## To read
 http://weavejester.github.io/compojure/compojure.route.html
 
-
-
+## Cursive hotkeys
+REPL `Alt shift p`
 
 ## License
 
